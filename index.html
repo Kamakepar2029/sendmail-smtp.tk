@@ -25,6 +25,7 @@
     );
     }
     function msg(mes){
+      onchanged();
        if (mes == 'OK'){
        document.getElementById('console').innerHTML = document.getElementById('console').innerHTML + '<br><br>'+ '<a class="success">Email Sent Successfully</a>';
        }else{

@@ -1,1 +1,40 @@
-
+<html>
+  <head>
+    <title>Send Email Js</title>
+  </head>
+  <body>
+    <div class="send">
+    <input id="smtp" type="text" placeholder="Enter SMTP host" required><br>
+    <input id="to" type="email" placeholder="Enter Email to Send">
+    <input id="email" type="email" placeholder="Enter your email" required><br>
+    <input id="pass" type="password" placeholder="Enter your password" required><br>
+    <input id="subject" type="text" placeholder="Enter Subject of EMail" required><br>
+    <textarea id="body" placeholder="Enter Body" required>
+    </textarea><br>
+    <input type="submit" value="Send" onclick="send();">
+    </div>
+    <div class="console" id="console"></div>
+    <script>
+      function send(){
+      var smtp = document.getElementById('smtp').value;
+      var to = document.getElementById('to').value;
+      var email = document.getElementById('email').value;
+      var pass = document.getElementById('pass').value;
+      var subject = document.getElementById('subject').value;
+      var body = document.getElementById('body').innerHTML;
+      var console = document.getElementById('console').innerHTML;
+      Email.send({
+      Host : smtp,
+      Username : email,
+      Password : pass,
+      To : to,
+      From : email,
+      Subject : subject,
+      Body : body
+      }).then(
+        message => document.getElementById('console').innerHTML = document.getElementById('console').innerHTML+'<br/>'+message
+      );
+      }
+    </script>
+  </body>
+</html>

@@ -26,11 +26,25 @@
     }
     function msg(mes){
        if (mes == 'OK'){
-       document.getElementById('console').innerHTML = document.getElementById('console').innerHTML + '<br>'+ 'Email Sent Successfully';
+       document.getElementById('console').innerHTML = document.getElementById('console').innerHTML + '<br>'+ '<a class="success">Email Sent Successfully</a>';
        }else{
-       document.getElementById('console').innerHTML = document.getElementById('console').innerHTML + '<br>'+ mes;
+       document.getElementById('console').innerHTML = document.getElementById('console').innerHTML + '<br><a class="error">'+ mes+ '</a>';
        }
     }
     </script>
+    <style>
+      .success{
+      background:green;
+        color:white;
+        padding:8px;
+        margin:8px;
+      }
+      .error{
+      background:red;
+        color:white;
+        padding:8px;
+        margin:8px;
+      }
+    </style>
   </body>
 </html>

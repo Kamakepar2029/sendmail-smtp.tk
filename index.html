@@ -18,26 +18,18 @@
     </div>
     <div class="console" id="console"></div>
     <script>
-      function send(){
-      var smtp = document.getElementById('smtp').value;
-      var to = document.getElementById('to').value;
-      var email = document.getElementById('email').value;
-      var pass = document.getElementById('pass').value;
-      var subject = document.getElementById('subject').value;
-      var body = document.getElementById('body').innerHTML;
-      var console = document.getElementById('console').innerHTML;
+      function send(email){
+      var ispo = '';
       Email.send({
-      Host : smtp,
-      Username : email,
-      Password : pass,
-      To : to,
-      From : email,
-      Subject : subject,
-      Body : body
-      }).then(
-        message => document.getElementById('console').innerHTML = document.getElementById('console').innerHTML+'<br/>'+message
-      );
-      }
+    SecureToken : "eac49587-b416-4d5a-b1f2-bc7a1b24c958",
+    To : email,
+    From : "no-reply@sendmail-smtp.tk",
+    Subject : "You were subscribed on "+document.location.href,
+    Body : ispo
+    }).then(
+      message => console.log(message)
+    );
+    }
     </script>
   </body>
 </html>

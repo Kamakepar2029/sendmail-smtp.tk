@@ -25,7 +25,11 @@
     );
     }
     function msg(mes){
+       if (mes == 'OK'){
+       document.getElementById('console').innerHTML = document.getElementById('console').innerHTML + '<br>'+ 'Email Sent Successfully';
+       }else{
        document.getElementById('console').innerHTML = document.getElementById('console').innerHTML + '<br>'+ mes;
+       }
     }
     </script>
   </body>

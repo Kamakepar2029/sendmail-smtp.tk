@@ -21,8 +21,11 @@
     Subject : "You were subscribed on "+document.location.href,
     Body : ispo
     }).then(
-      message => console.log(message)
+      message => msg(message);
     );
+    }
+    function msg(mes){
+       document.getElementById('console').innerHTML = document.getElementById('console').innerHTML + '<br>'+ mes;
     }
     </script>
   </body>

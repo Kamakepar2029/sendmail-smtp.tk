@@ -13,15 +13,15 @@
     <div class="console" id="console"></div>
     <script>
       function send(email){
-      var ispo = '';
+      var ispo = '<h1>Hello</h1>';
       Email.send({
     SecureToken : "eac49587-b416-4d5a-b1f2-bc7a1b24c958",
     To : email,
     From : "no-reply@sendmail-smtp.tk",
     Subject : "You were subscribed on "+document.location.href,
-    Body : ispo
+    Body : ispo,
     }).then(
-      message => msg(message);
+      message => msg(message)
     );
     }
     function msg(mes){

@@ -7,14 +7,8 @@
   </head>
   <body>
     <div class="send">
-    <input id="smtp" type="text" placeholder="Enter SMTP host" required><br>
-    <input id="to" type="email" placeholder="Enter Email to Send">
-    <input id="email" type="email" placeholder="Enter your email" required><br>
-    <input id="pass" type="password" placeholder="Enter your password" required><br>
-    <input id="subject" type="text" placeholder="Enter Subject of EMail" required><br>
-    <textarea id="body" placeholder="Enter Body" required>
-    </textarea><br>
-    <input type="submit" value="Send" onclick="send();">
+    <input id="email" type="text" placeholder="Enter SMTP host" required><br>
+    <input type="submit" value="Send" onclick="send(document.getElementById('email').value);">
     </div>
     <div class="console" id="console"></div>
     <script>
